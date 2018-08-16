@@ -16,10 +16,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/lite-orm-1.9.2.jar')
+    implementation files('libs/AMap_Location_V3.5.0_20170731.jar')
     implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
@@ -30,7 +36,12 @@ dependencies {
     implementation 'com.vanniktech:rxpermission:0.3.0'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
     implementation 'com.jakewharton:butterknife:8.8.1'
-
     implementation 'com.jakewharton:butterknife-annotations:8.8.1'
+    implementation 'com.android.support:design:28.0.0-rc01'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
 }

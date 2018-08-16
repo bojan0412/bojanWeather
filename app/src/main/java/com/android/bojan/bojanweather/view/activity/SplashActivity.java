@@ -2,13 +2,11 @@ package com.android.bojan.bojanweather.view.activity;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.android.bojan.bojanweather.R;
-
-import org.reactivestreams.Subscription;
 
 import java.util.concurrent.TimeUnit;
 
