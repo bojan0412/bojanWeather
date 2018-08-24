@@ -92,8 +92,6 @@ public class ApiClient {
                 return Observable.error(new RuntimeException(String.format("%s is not in the api list", city)));
             }
             return Observable.just(weatherAPI);
-        }).map(weatherAPI -> {
-            return weatherAPI;
         }).compose(RxUtil.rxSchedulerHelper());
     }
 }

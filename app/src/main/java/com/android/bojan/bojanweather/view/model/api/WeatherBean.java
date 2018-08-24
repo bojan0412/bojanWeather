@@ -6,6 +6,7 @@ import java.util.List;
  * Create by bojan
  * on 2018/8/16
  */
+
 public class WeatherBean {
 
 
@@ -55,9 +56,11 @@ public class WeatherBean {
         }
 
 
+
         public List<HourlyForecastBean> getHourly_forecast() {
             return hourly_forecast;
         }
+
 
 
         public static class AqiBean {

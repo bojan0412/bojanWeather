@@ -6,4 +6,6 @@ package com.android.bojan.bojanweather.view.base;
  */
 public interface BasePresenter {
     void onUnsubscribe();
+
+    void onsubscribe(String city);
 }

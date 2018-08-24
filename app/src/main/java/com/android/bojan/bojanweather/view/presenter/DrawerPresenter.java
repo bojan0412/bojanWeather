@@ -34,4 +34,9 @@ public class DrawerPresenter implements DrawerContract.Presenter {
     public void onUnsubscribe() {
 
     }
+
+    @Override
+    public void onsubscribe(String city) {
+
+    }
 }

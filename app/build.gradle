@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.bojan.bojanweather"
-        minSdkVersion 19
+        minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -38,10 +38,15 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.jakewharton:butterknife-annotations:8.8.1'
+    api 'com.jakewharton:butterknife:8.8.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.android.support:design:28.0.0-rc01'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.github.promeg:tinypinyin:2.0.3'
+    implementation 'com.androidadvance:topsnackbar:1.1.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
+
 }

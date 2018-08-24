@@ -10,22 +10,29 @@ import com.litesuits.orm.LiteOrm;
  * on 2018/8/16
  */
 public class LiteOrmUtil {
-    private static LiteOrm sLiteOrm;
+
+    private static LiteOrm litOrm;
 
     private LiteOrmUtil() {
-        if (sLiteOrm == null) {
-            sLiteOrm = LiteOrm.newSingleInstance(BojanWeatherApplication.getContext(), DBConfig.DB_NAME);
+        if (litOrm == null) {
+            litOrm = LiteOrm.newSingleInstance(BojanWeatherApplication.getContext(), DBConfig.DB_NAME);
         }
-        sLiteOrm.setDebugged(BuildConfig.DEBUG);
+        litOrm.setDebugged(BuildConfig.DEBUG);
     }
+
+
+    private static class OrmHolder {
+        private static final LiteOrmUtil mInstance = new LiteOrmUtil();
+    }
+
+    private static LiteOrmUtil getOrmHolder() {
+        return OrmHolder.mInstance;
+    }
+
 
     public static LiteOrm getInstance() {
-        new Holder();
-        return sLiteOrm;
+        getOrmHolder();
+        return litOrm;
     }
 
-    private static class Holder {
-        private static LiteOrmUtil liteOrmUtil = new LiteOrmUtil();
-
-    }
 }
